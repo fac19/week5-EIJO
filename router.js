@@ -1,16 +1,27 @@
-const homeHandler = require('./handlers/home_handler')
-const publicHandler = require('./handlers/public_handler')
-const missingHandler = require('./handlers/missing_handler')
+const homeHandler = require('./handlers/homeHandler')
+const missingHandler = require('./handlers/missingHandler')
+const recipesHandler = require('./handlers/recipesHandler')
 
 function router(request, response) {
   const url = request.url
   if (url === '/') {
-    response.writeHead(200, { 'content-type': 'text/html' })
-    home_handler(request, response)
-    // }else if (url === /*the directory for CSS etc*/){
-  } else {
-    response.writeHead(404, { 'content-type': 'text/html' })
-    response.end(`<h1>Not Found</h1>`)
+    homeHandler(request, response)
+  } else if (url === '/post-form' /*the directory for CSS etc*/) {
+    formHandler(request, response)
+  } else if (url === '/breakfast') {
+    recipesHandler.breakfastHandler(request, response)
+  } else if (url === '/lunch') {
+    recipesHandler.lunchHandler(request, response)
+  } else if (url === '/dinner') {
+    recipesHandler.dinnerHandler(request, response)
+  } else if (url === '/dessert') {
+    recipesHandler.dessertHandler(request, response)
+  } else if (url === '/snacks') {
+    recipesHandler.snacksHandler(request, response)
+  } /* else if (url.includes("public") {
+      publicHandler(request, response);
+  } */ else {
+    missingHandler(request, response)
   }
 }
 
