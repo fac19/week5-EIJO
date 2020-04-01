@@ -1,0 +1,25 @@
+{
+  "name": "week5-eijo",
+  "version": "1.0.0",
+  "description": "database repo",
+  "main": "router.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac19/week5-EIJO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac19/week5-EIJO/issues"
+  },
+  "homepage": "https://github.com/fac19/week5-EIJO#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2",
+    "tape": "^4.13.2"
+  }
+}
