@@ -18,7 +18,9 @@ function router(request, response) {
     recipesHandler.dessertHandler(request, response);
   } else if (url === "/snacks") {
     recipesHandler.snacksHandler(request, response);
-  } else {
+  } /* else if (url.includes("public") {
+      publicHandler(request, response);
+  } */ else {
     missingHandler(request, response);
   }
 }
