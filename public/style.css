@@ -1,3 +1,99 @@
 * {
-  background: red;
+  box-sizing: border-box;
+}
+
+:root {
+  --bgColour: #fde2e2;
+  --color-purple: #522d5b;
+  --color-dark-pink: #d7385e;
+  --color-orange: #fb7b6b;
+  --color-green: #e7d39f;
+  --footerColour: #d8b9c3;
+}
+
+/* CSS for home page */
+body {
+  background-color: var(--bgColour);
+}
+
+.home_wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title {
+  color: var(--color-purple);
+  font-family: arial;
+  font-size: 2rem;
+}
+
+.tagline {
+  color: var(--color-orange);
+  max-width: 75%;
+  margin: auto;
+  margin-bottom: 5%;
+  text-align: justify;
+}
+
+.links-wrapper__form {
+  text-decoration: none;
+}
+
+.links-wrapper__recipes {
+  display: block;
+  border-radius: 9%;
+  padding: 5% 0 5% 0;
+  max-width: 75%;
+  margin: 0 auto 2% auto;
+  background-color: var(--color-purple);
+  color: var(--bgColour);
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--color-orange);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3%;
+}
+
+/* CSS for form */
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: left;
+  margin-bottom: 3rem;
+}
+
+.form__label {
+  font-size: 1.5rem;
+  color: var(--color-purple);
+  margin: 1rem 0 0.75rem 0;
+}
+
+.form__input,
+.form__textbox {
+  max-width: 75%;
+  margin-bottom: 0.75rem;
+}
+
+.recipe__category,
+.dietary__req {
+  width: 40%;
+  background-color: var(--color-dark-pink);
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.form__button {
+  background-color: var(--color-purple);
+  padding: 2.5%;
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  width: 75%;
 }
