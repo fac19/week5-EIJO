@@ -33,24 +33,27 @@ function home() {
 function form() {
   return sharedLayout(`
       <section>
-        <form class="form" action="/post-form">
-        <label class="form__label" for="recipe-title">Recipe Title:</label>
-        <input class="form__input" type="text" name="recipe-title" placeholder="Pizza" required> 
+        <form class="form" id="form" action="/submit" method="POST">
+        <label class="form__label" for="recipeTitle">Recipe Title:</label>
+        <input class="form__input" id="recipeTitle" type="text" name="recipeTitle" placeholder="Pizza" required> 
         
-        <label class="form__label" for="recipe-category">Choose a category:</label>
-        <select name="recipe-category">
+        <label class="form__label" for="recipeCategory">Choose a category:</label>
+        <select id="recipeCategory" name="type" required>
           <option value="breakfast">Breakfast</option>
           <option value="lunch">Lunch</option>
           <option value="dinner">Dinner</option>
           <option value="snacks">Snacks</option>
           <option value="desserts">Desserts</option>
         </select>
-        <label class="form__label" for="dietary-req">Vegetarian:</label>
-        <input class="form__input" type="checkbox" name="dietary-req" required> 
         <label class="form__label" for="ingredients">Ingredients:</label>
-        <textarea class="form__textbox" form="form" name="ingredients" placeholder="1 egg" required></textarea>
+        <textarea class="form__textbox" id="ingredients" form="form" name="ingredients" placeholder="1 egg" required></textarea>
         <label class="form__label" for="ingredients">Method:</label>
-        <textarea class="form__textbox" form="form" name="method" placeholder="oven it" required></textarea>
+        <textarea class="form__textbox" form="form" id="method" name="method" placeholder="oven it" required></textarea>
+        <label class="form__label" for="vegetarian">Vegetarian:</label>
+        <select id="vegetarian" name="vegetarian" required>
+          <option value="true">yes</option>
+          <option value="false">no</option>
+        </select>
         <button class="form__button" aria-label="button to add recipe" type="submit">Add Recipe!</button>
         </form>
       </section>
