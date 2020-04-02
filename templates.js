@@ -1,3 +1,5 @@
+const handler = require("./handlers/recipesHandler");
+
 function sharedLayout(bodyContent) {
   return `<!DOCTYPE html>
     <html lang="en">
@@ -63,18 +65,27 @@ function form() {
 `);
 }
 
-// import from the model js get type
+function createRecipes(posts) {
+  let str = "";
+  posts.map(item => {
+    return (str += `<section class='recipe__card'>
+    <h1 class='recipe__card-title'>${item.recipetitle}</h1>
+    <h2 class='recipe__card-subtitle'>Ingredients</h2>
+    <p class='recipe__card-subtext'>${item.ingredients}</p>
+    <h2 class='recipe__card-subtitle'>Method</h2>
+    <p class='recipe__card-subtext'>${item.method}</p>
+    <i class="fas fa-seedling"></i>
+  </section>`);
+  });
+  return sharedLayout(str);
+}
 
-// type = [{}]
-
-// type.map(recipe => {
-//   return `<section>
-//   `<h1> ${recipe.recipetitle}</h1>
-
-//   </section>`
-// })
+// function displayRecipes() {
+//   return sharedLayout(createRecipes());
+// }
 
 module.exports = {
   home,
-  form
+  form,
+  createRecipes
 };
