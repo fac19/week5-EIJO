@@ -28,12 +28,3 @@ function router(request, response) {
 }
 
 module.exports = router;
-
-// } else if (url === "/lunch") {
-//   recipesHandler(request, response);
-// } else if (url === "/dinner") {
-//   recipesHandler(request, response);
-// } else if (url === "/dessert") {
-//   recipesHandler(request, response);
-// } else if (url === "/snacks") {
-//   recipesHandler(request, response);
