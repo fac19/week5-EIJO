@@ -1,14 +1,15 @@
-const homeHandler = require('./handlers/homeHandler')
-const missingHandler = require('./handlers/missingHandler')
-const formHandler = require('./handlers/formHandler')
+// const homeHandler = require('./handlers/homeHandler')
+// const missingHandler = require('./handlers/missingHandler')
+// const formHandler = require('./handlers/formHandler')
 const recipesHandler = require('./handlers/recipesHandler')
+const handlers = require('./handlers/handlers')
 
 function router(request, response) {
   const url = request.url
   if (url === '/') {
-    homeHandler(request, response)
+    handlers.homeHandler(request, response)
   } else if (url === '/form') {
-    formHandler(request, response) //displays the form
+    handlers.formHandler(request, response) //displays the form
   } else if (url === '/post-form' && method === POST) {
     postFormHandler(request, response) //deals with form post request
   } else if (url === '/breakfast') {
@@ -21,13 +22,11 @@ function router(request, response) {
     recipesHandler.dessertHandler(request, response)
   } else if (url === '/snacks') {
     recipesHandler.snacksHandler(request, response)
+  } else if (url.includes('public/')) {
+    handlers.public(request, response)
   } else {
-    missingHandler(request, response)
+    handlers.missingHandler(request, response)
   }
 }
 
 module.exports = router
-
-// else if (url.includes("public/") {
-//   publicHandler(request, response);
-// }

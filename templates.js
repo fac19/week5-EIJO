@@ -2,10 +2,11 @@ function sharedLayout(bodyContent) {
   return `<!DOCTYPE html>
     <html lang="en">
       <head>
+      <title>Recipes Project</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel='stylesheet' href="public/style.css"
-        <title>Document</title>
+        
       </head>
       <body>${bodyContent}</body>
     </html>
@@ -55,6 +56,17 @@ function form() {
       </section>
 `)
 }
+
+// import from the model js get type
+
+// type = [{}]
+
+// type.map(recipe => {
+//   return `<section>
+//   `<h1> ${recipe.recipetitle}</h1>
+
+//   </section>`
+// })
 
 module.exports = {
   home,

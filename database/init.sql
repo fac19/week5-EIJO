@@ -7,11 +7,12 @@ CREATE TABLE recipes(
     recipeTitle VARCHAR(255),
     type VARCHAR(255),
     ingredients VARCHAR(255),
-    method VARCHAR(255),
+    method TEXT,
     vegetarian BOOLEAN
 );
+
 INSERT INTO recipes(recipeTitle, type, ingredients, method, vegetarian) VALUES
-('Pesto pasta', 'dinner', 'pasta, peso', 'cook it', '1'),
+('Pesto pasta', 'dinner', 'pasta, pesto', 'cook it', '1'),
 ('Shepherds pie', 'dinner', 'mash potato, meat', 'oven it', '0'),
 ('pancakes', 'breakfast', 'eggs + stuff', 'flip it', '1');
 
