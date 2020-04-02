@@ -59,24 +59,31 @@ function form() {
 `);
 }
 
-function createRecipes(post) {
-  return sharedLayout(
-    post.map(item => {
-      `<section class='recipe__card'>
-    <h1 class='recipe__card-title'>${item.recipeTitle}</h1>
+function createRecipes(posts) {
+  let str = "";
+  posts.map(item => {
+    return (str += `<section class='recipe__card'>
+    <h1 class='recipe__card-title'>${item.recipetitle}</h1>
     <h2 class='recipe__card-subtitle'>Ingredients</h2>
     <p class='recipe__card-subtext'>${item.ingredients}</p>
     <h2 class='recipe__card-subtitle'>Method</h2>
     <p class='recipe__card-subtext'>${item.method}</p>
     <i class="fas fa-seedling"></i>
-
-  </section>`;
-    })
-  );
+  </section>`);
+  });
+  return sharedLayout(str);
 }
+
+// function displayRecipes() {
+//   return sharedLayout(createRecipes());
+// }
 
 module.exports = {
   home,
   form,
   createRecipes
+  // displayRecipes
 };
+
+/*
+ */
