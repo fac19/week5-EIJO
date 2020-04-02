@@ -16,9 +16,9 @@ function createNewEntry(data){
   return db.query(`INSERT INTO recipes(recipeTitle, type, ingredients, method, vegetarian) VALUES($1, $2, $3, $4, $5)`, values);
 }
 
-// function getAllPosts(){
+function getAllPosts(){
 
-// }
+}
 
 
 

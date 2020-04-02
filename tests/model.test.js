@@ -2,7 +2,7 @@ const test = require("tape");
 const db = require("../database/connection");
 const build = require("../database/build");
 
-const { getTitles, getOneEntry, createNewEntry } = require("../model");
+const { getTitles, getOneEntry, createNewEntry, getPostsByType } = require("../model");
 
 test("tests are running!", t => {
   const x = 5;
