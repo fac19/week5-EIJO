@@ -10,7 +10,7 @@ test("Check status code is 200 on homepage", t => {
     .expect("content-type", "text/html")
     .end((error, response) => {
       t.error(error);
-      t.equal(response.text.includes("Recipes project"), true);
+      t.equal(response.text.includes("Cookvid-19"), true);
       t.end();
     });
 });
@@ -23,7 +23,7 @@ test("Check status code is 200 for Breakfast page", t => {
     .expect("content-type", "text/html")
     .end((error, response) => {
       t.error(error);
-      t.equal(response.text.includes("breakfast"), true);
+      t.equal(response.text.includes("pancakes"), true);
       t.end();
     });
 });

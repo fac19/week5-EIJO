@@ -80,10 +80,6 @@ function createRecipes(posts) {
   return sharedLayout(str);
 }
 
-// function displayRecipes() {
-//   return sharedLayout(createRecipes());
-// }
-
 module.exports = {
   home,
   form,
