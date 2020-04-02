@@ -6,8 +6,8 @@ const {
   getTitles,
   getOneEntry,
   createNewEntry,
-  getPostsByType,
-} = require('../model')
+  getPostsByType
+} = require("../model");
 
 test('tests are running!', t => {
   const x = 5
