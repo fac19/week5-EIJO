@@ -10,17 +10,15 @@ function router(request, response) {
     handlers.homeHandler(request, response);
   } else if (url === "/form") {
     handlers.formHandler(request, response); //displays the form
-    // } else if (url === "/post-form" && method === POST) {
-    //   postFormHandler(request, response); //deals with form post request
-  } else if (url === "/breakfast") {
-    recipesHandler(request, response);
-  } else if (url === "/lunch") {
-    recipesHandler(request, response);
-  } else if (url === "/dinner") {
-    recipesHandler(request, response);
-  } else if (url === "/dessert") {
-    recipesHandler(request, response);
-  } else if (url === "/snacks") {
+  } else if (url === "/submit" || request.method === "POST") {
+    handlers.submit(request, response); //deals with form post request
+  } else if (
+    url === "/breakfast" ||
+    url === "/lunch" ||
+    url === "/dinner" ||
+    url === "/dessert" ||
+    url === "/snacks"
+  ) {
     recipesHandler(request, response);
   } else if (url.includes("public/")) {
     handlers.public(request, response);
@@ -30,3 +28,12 @@ function router(request, response) {
 }
 
 module.exports = router;
+
+// } else if (url === "/lunch") {
+//   recipesHandler(request, response);
+// } else if (url === "/dinner") {
+//   recipesHandler(request, response);
+// } else if (url === "/dessert") {
+//   recipesHandler(request, response);
+// } else if (url === "/snacks") {
+//   recipesHandler(request, response);
