@@ -10,8 +10,8 @@ function router(request, response) {
     handlers.homeHandler(request, response)
   } else if (url === '/form') {
     handlers.formHandler(request, response) //displays the form
-  } else if (url === '/post-form' && method === POST) {
-    postFormHandler(request, response) //deals with form post request
+  } else if (url === '/submit' || request.method === 'POST') {
+    handlers.submit(request, response) //deals with form post request
   } else if (url === '/breakfast') {
     recipesHandler.breakfastHandler(request, response)
   } else if (url === '/lunch') {
