@@ -22,11 +22,11 @@
     "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "nodemon": "^2.0.2",
-    "tap-spec": "^5.0.0",
-    "tape": "^4.13.2",
-    "supertest": "^4.0.2"
+    "tape": "^4.13.2"
   },
   "dependencies": {
-    "pg": "^8.0.0"
+    "pg": "^8.0.0",
+    "supertest": "^4.0.2",
+    "tap-spec": "^5.0.0"
   }
 }
