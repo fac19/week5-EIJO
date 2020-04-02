@@ -2,7 +2,12 @@ const test = require("tape");
 const db = require("../database/connection");
 const build = require("../database/build");
 
-const { getTitles, getOneEntry, createNewEntry, getPostsByType } = require("../model");
+const {
+  getTitles,
+  getOneEntry,
+  createNewEntry,
+  getPostsByType
+} = require("../model");
 
 test("tests are running!", t => {
   const x = 5;
@@ -79,6 +84,20 @@ test("Can create new recipe!", t => {
             t.equal(entry.method, "Cook"),
             t.end();
         });
+      })
+      .catch(err => {
+        t.error(err), t.end();
+      });
+  });
+});
+
+test("Can get all posts of a common type", t => {
+  build().then(() => {
+    getPostsByType(type)
+      .then(data => {
+        t.equal(data[0].type, type);
+        t.equal(data[data.length - 1].type, type);
+        t.end();
       })
       .catch(err => {
         t.error(err), t.end();
