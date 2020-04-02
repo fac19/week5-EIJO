@@ -1,3 +1,5 @@
+const handler = require("./handlers/recipesHandler");
+
 function sharedLayout(bodyContent) {
   return `<!DOCTYPE html>
     <html lang="en">
@@ -10,7 +12,7 @@ function sharedLayout(bodyContent) {
       </head>
       <body>${bodyContent}</body>
     </html>
-    `
+    `;
 }
 
 function home() {
@@ -27,7 +29,7 @@ function home() {
        <section class ="footer" aria-label="contact-details">
        <p>all the random footer stuff and the contacts?</p>
        </section>
-    `)
+    `);
 }
 
 function form() {
@@ -54,21 +56,27 @@ function form() {
         <button class="form__button" aria-label="button to add recipe" type="submit">Add Recipe!</button>
         </form>
       </section>
-`)
+`);
 }
 
-// import from the model js get type
+function createRecipes(post) {
+  return sharedLayout(
+    post.map(item => {
+      `<section class='recipe__card'>
+    <h1 class='recipe__card-title'>${item.recipeTitle}</h1>
+    <h2 class='recipe__card-subtitle'>Ingredients</h2>
+    <p class='recipe__card-subtext'>${item.ingredients}</p>
+    <h2 class='recipe__card-subtitle'>Method</h2>
+    <p class='recipe__card-subtext'>${item.method}</p>
+    <i class="fas fa-seedling"></i>
 
-// type = [{}]
-
-// type.map(recipe => {
-//   return `<section>
-//   `<h1> ${recipe.recipetitle}</h1>
-
-//   </section>`
-// })
+  </section>`;
+    })
+  );
+}
 
 module.exports = {
   home,
   form,
-}
+  createRecipes
+};
