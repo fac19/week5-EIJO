@@ -1,6 +1,3 @@
-// const homeHandler = require('./handlers/homeHandler')
-// const missingHandler = require('./handlers/missingHandler')
-// const formHandler = require('./handlers/formHandler')
 const recipesHandler = require("./handlers/recipesHandler");
 const handlers = require("./handlers/handlers");
 
