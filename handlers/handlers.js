@@ -16,7 +16,9 @@ function public(request, response) {
 
   fs.readFile(newPath, (error, file) => {
     if (error) {
-      console.error(error);
+      console.error(error)
+      response.writeHead(500, { 'content-type': 'text/html' })
+      response.end(`<h1>Internal server error oops!</h1>`)
     } else {
       let type = types[extension];
       response.writeHead(200, { "content-type": type });
