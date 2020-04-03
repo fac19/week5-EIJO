@@ -68,13 +68,13 @@ function createRecipes(posts) {
   let str = "";
   posts.map(item => {
     return (str += `<section class='recipe__card'>
-    <a class="link__home" href="/">Back to Home Page!</a>
-    <a class="link__" href="/form">Write A Recipe!</a>
     <h1 class='recipe__card-title'>${item.recipetitle}</h1>
     <h2 class='recipe__card-subtitle'>Ingredients</h2>
     <p class='recipe__card-subtext'>${item.ingredients}</p>
     <h2 class='recipe__card-subtitle'>Method</h2>
     <p class='recipe__card-subtext'>${item.method}</p>
+    <a class="link__home" href="/">Back to Home Page!</a>
+    <a class="link__form" href="/form">Write A Recipe!</a>
     <i class="fas fa-seedling"></i>
   </section>`);
   });
