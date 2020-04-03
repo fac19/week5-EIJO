@@ -1,6 +1,3 @@
-// const homeHandler = require('./handlers/homeHandler')
-// const missingHandler = require('./handlers/missingHandler')
-// const formHandler = require('./handlers/formHandler')
 const recipesHandler = require("./handlers/recipesHandler");
 const handlers = require("./handlers/handlers");
 
@@ -9,9 +6,9 @@ function router(request, response) {
   if (url === "/") {
     handlers.homeHandler(request, response);
   } else if (url === "/form") {
-    handlers.formHandler(request, response); //displays the form
+    handlers.formHandler(request, response);
   } else if (url === "/submit" || request.method === "POST") {
-    handlers.submit(request, response); //deals with form post request
+    handlers.submit(request, response);
   } else if (
     url === "/breakfast" ||
     url === "/lunch" ||
