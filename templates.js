@@ -37,6 +37,7 @@ function form() {
   return sharedLayout(`
       <section>
         <form class="form" id="form" action="/submit" method="POST">
+        <a class="link__home" href="/">Back to Home Page!</a>
         <label class="form__label" for="recipeTitle">Recipe Title:</label>
         <input class="form__input" id="recipeTitle" type="text" name="recipeTitle" placeholder="Pizza" required> 
         
@@ -72,6 +73,8 @@ function createRecipes(posts) {
     <p class='recipe__card-subtext'>${item.ingredients}</p>
     <h2 class='recipe__card-subtitle'>Method</h2>
     <p class='recipe__card-subtext'>${item.method}</p>
+    <a class="link__home" href="/">Back to Home Page!</a>
+    <a class="link__form" href="/form">Write A Recipe!</a>
     <i class="fas fa-seedling"></i>
   </section>`);
   });
