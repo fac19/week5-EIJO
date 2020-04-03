@@ -20,6 +20,8 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: relative;
+  min-height: 100vh;
 }
 
 .title {
@@ -34,6 +36,10 @@ body {
   margin: auto;
   margin-bottom: 5%;
   text-align: justify;
+}
+
+.links-wrapper {
+  padding-bottom: 2.5rem;
 }
 
 .links-wrapper__form {
@@ -56,7 +62,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 3%;
+  height: 2.5rem;
 }
 
 /* CSS for form */
