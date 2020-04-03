@@ -1,7 +1,7 @@
 const pg = require('pg')
 const dotenv = require('dotenv')
 
-dotenv.config()
+dotenv.config();
 
 const url = process.env.DATABASE_URL
 
