@@ -1,18 +1,16 @@
-const pg = require("pg");
-const dotenv = require("dotenv");
+const pg = require('pg')
+const dotenv = require('dotenv')
 
-dotenv.config();
-e it'll default to your local .env variables
-=======
+dotenv.config()
 
-const url = process.env.DATABASE_URL;
+const url = process.env.DATABASE_URL
 
 if (!url) {
-  console.error();
+  console.error()
 }
 
 const db = new pg.Pool({
-  connectionString: url
-});
+  connectionString: url,
+})
 
-module.exports = db;
+module.exports = db
