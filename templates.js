@@ -1,5 +1,3 @@
-const handler = require("./handlers/recipesHandler");
-
 function sharedLayout(bodyContent) {
   return `<!DOCTYPE html>
     <html lang="en">
