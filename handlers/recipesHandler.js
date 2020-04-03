@@ -12,7 +12,11 @@ function postHandler(request, response) {
       response.writeHead(200, { "content-type": "text/html" });
       response.end(page);
     })
-    .catch(console.error());
+    .catch(err => {
+      console.error(err);
+      response.writeHead(404, { "content-type": "text/html" });
+      response.end("<h1>There was an error</h1>");
+    });
 }
 
 module.exports = postHandler;

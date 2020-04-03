@@ -10,7 +10,8 @@ if (!url) {
 }
 
 const db = new pg.Pool({
-  connectionString: url,
-})
+  connectionString: url
+});
+
 
 module.exports = db
