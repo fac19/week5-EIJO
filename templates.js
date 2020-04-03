@@ -29,7 +29,7 @@ function home() {
           <a class="links-wrapper__recipes" href="/snacks" aria-label="Snack recipes">Snacks!</a>
         </section> 
           <footer aria-label="contact-details">
-            <p>all the random footer stuff and the contacts?</p>
+            <p>Bought to you by Team EIJO</p>
         </footer>
       </div>
     `);
