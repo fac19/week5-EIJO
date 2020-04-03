@@ -37,6 +37,7 @@ function form() {
   return sharedLayout(`
       <section>
         <form class="form" id="form" action="/submit" method="POST">
+        <a class="link__home" href="/">Back to Home Page!</a>
         <label class="form__label" for="recipeTitle">Recipe Title:</label>
         <input class="form__input" id="recipeTitle" type="text" name="recipeTitle" placeholder="Pizza" required> 
         
@@ -67,7 +68,7 @@ function createRecipes(posts) {
   let str = "";
   posts.map(item => {
     return (str += `<section class='recipe__card'>
-    <a class="link__home" href="/">Back to HomePage!</a>
+    <a class="link__home" href="/">Back to Home Page!</a>
     <a class="link__" href="/form">Write A Recipe!</a>
     <h1 class='recipe__card-title'>${item.recipetitle}</h1>
     <h2 class='recipe__card-subtitle'>Ingredients</h2>
